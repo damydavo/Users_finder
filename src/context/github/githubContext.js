@@ -21,8 +21,6 @@ export const GithubProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(githubReducer, initialState)
 
- 
-
     //search users
 
     const searchUsers = async (text) => {
@@ -71,7 +69,13 @@ export const GithubProvider = ({ children }) => {
 
        //get user repo
        const getRepo= async (login) => {
-        const res = await fetch(`${GITHUB_URL}/users/${login}/repos`, {
+
+        const params = new URLSearchParams({
+            sort: 'created',
+            per_page: 10
+        })
+
+        const res = await fetch(`${GITHUB_URL}/users/${login}/repos?${params}`, {
             headers: {
                 Authorization:`token${GITHUB_TOKEN}`
             }

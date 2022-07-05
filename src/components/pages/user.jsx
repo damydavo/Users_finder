@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import GithubContext from "../../context/github/githubContext";
 import RepoList from './../repo/repoList';
 
+
 const User = () => {
     const { getUser, user, loading, getRepo, repos } = useContext(GithubContext)
 
@@ -39,6 +40,7 @@ const User = () => {
 
 
     return ( 
+      
         <>
           <div className="w-full mx-auto lg:w-10/12">
             <div className="mb-4">
@@ -69,11 +71,13 @@ const User = () => {
                                 )}
                             </h1>
                             <p>{bio}</p>
+                            {/* eslint-disable-next-line */}
                             <div className="mt-4 card-actions">
-                                <a href={html_url} target='_blank'></a>
+                                <a href={html_url} target='_blank' rel='noopener noreferrer'></a>
+                                
                             </div>
                             <div className="mt-4 card-actions">
-                               <a href={html_url} target='_blank' className='btn btn-outline'>Visit Github Profile</a>
+                               <a href={html_url} target='_blank' rel='noopener noreferrer' className='btn btn-outline'>Visit Github Profile</a>
                             </div>
                         </div>
 
@@ -91,7 +95,7 @@ const User = () => {
                             <div className="stat">
                               <div className="stat-title text-md">Blog</div>
                               <div className="text-lg stat-value">
-                                <a href={`https://${blog}`} target='_blank' rel='noreferrer'>{blog}</a>
+                                <a href={`https://${blog}`} target='_blank' rel='noopener noreferrer'>{blog}</a>
                               </div>
                             </div>
                            )}
@@ -100,7 +104,7 @@ const User = () => {
                             <div className="stat">
                               <div className="stat-title text-md">Twitter</div>
                               <div className="text-lg stat-value">
-                                <a href={`https://twitter.com/${twitter_username}`} target='_blank' rel='noreferrer'>{twitter_username}</a>
+                                <a href={`https://twitter.com/${twitter_username}`} target='_blank' rel='noopener noreferrer'>{twitter_username}</a>
                               </div>
                             </div>
                            )}
