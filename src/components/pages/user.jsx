@@ -70,9 +70,9 @@ const User = () => {
                                     <div className="mx-1 badge badge-info">Hireable</div>
                                 )}
                             </h1>
-                            <p>{bio}</p>
-                            {/* eslint-disable-next-line */}
+                <p>{bio}</p>
                             <div className="mt-4 card-actions">
+                  {/* eslint-disable-next-line */}
                                 <a href={html_url} target='_blank' rel='noopener noreferrer'></a>
                                 
                             </div>
