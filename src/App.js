@@ -21,7 +21,7 @@ const App = () => {
             <main className="container mx-auto pb-12">
               <Alert />
               <Routes>
-                <Route exact path="/" element={<Home />} />
+                <Route exact path="/Users_finder" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/user/:login" element={<User />} />
                 <Route path="/notfound" element={<NotFound />} />
