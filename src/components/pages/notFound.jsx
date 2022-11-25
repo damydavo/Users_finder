@@ -10,7 +10,7 @@ const NotFound = () => {
                   Oops!
               </h1>
               <p className="text-5xl mb-8">404 - Page NotFound!</p>
-              <Link to ='/' className="btn btn-primary btn-lg">
+            <Link to='/Users_finder' className="btn btn-primary btn-lg">
                 <FaHome className="mr-2" />
                 Back to Home
               </Link>
